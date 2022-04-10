@@ -11,7 +11,7 @@ interface MBSDProps {
 const MultipleBouncySqDown = (props : MBSDProps) => {
     const {parentStyle, bouncySq} = useStyle(props.w, props.h, props.scale)
     return (
-        <div style = {parentStyle()}>
+        <div style = {parentStyle()} onClick = {() => props.onClick()}>
             {[0, 1].map(i => <div key = {`bouncy_${i}`} style = {bouncySq(i)}></div>)}
         </div>
     )

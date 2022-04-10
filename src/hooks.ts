@@ -67,9 +67,9 @@ export const useStyle = (w : number, h : number, scale : number) => {
         },
         bouncySq(i : number) : CSSProperties {
             const left : string = `${-size + size * i}px`
-            const top : string = `${-size}px`
+            const top : string = `${-size + (h / 2) * divideScale(sf, i, 2)}px`
             const width : string = `${size}px`
-            const height : string = `${-size + (h / 2) * divideScale(sf, i, 2)}px`
+            const height : string = `${size}px`
             return {
                 position, 
                 left, 
